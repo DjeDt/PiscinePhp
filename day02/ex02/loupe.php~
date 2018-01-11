@@ -1,0 +1,8 @@
+#!/usr/bin/php
+<?PHP
+
+$fd = file($argv[1]);
+foreach ($fd as $data)
+		echo $data;
+
+?>

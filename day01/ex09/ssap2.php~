@@ -1,0 +1,46 @@
+#!/usr/bin/php
+<?PHP
+
+function ft_split($input)
+{
+	$arr = explode(" ", $input);
+	foreach ($arr as $key => $value)
+	{
+		if ($value == '')
+		unset($arr[$key]);
+	}
+	return $arr;
+}
+
+$count = 1;
+$arr_chr = array();
+$arr_num = array();
+$arr_otr = array();
+
+while ($argv[$count] != NULL)
+{
+	$tmp = ft_split($argv[$count]);
+	$count2 = 0;
+	while ($tmp[$count2] != NULL)
+	{
+
+/*
+		if (ctype_digit($tmp[$count2]) == TRUE)
+			$arr_num[] = $tmp[$count2];
+		else if (ctype_alnum($tmp[$count2]) == TRUE)
+			$arr_chr[] = $tmp[$count2];
+		else
+			$arr_otr[] = $tmp[$count2];
+*/
+		$count2++;
+	}
+	unset($tmp);
+	$count++;
+}
+sort($arr_chr, SORT_FLAG_CASE | SORT_STRING);
+sort($arr_num, SORT_FLAG_CASE | SORT_STRING);
+sort($arr_otr, SORT_FLAG_CASE | SORT_STRING);
+$final = array_merge($arr_chr, $arr_num, $arr_otr);
+foreach($final as $str)
+	print("$str\n");
+?>
