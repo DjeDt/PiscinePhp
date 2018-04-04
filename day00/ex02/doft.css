@@ -1,26 +1,267 @@
-H1
+BODY
 {
-  box-shadow: 6px 6px 6px black;
-  border-radius: 10px;
-  background: #069
+	font-style
 }
 
-.d42
+.core
 {
-  background-image: url("resources/day_of_the_42.png");
-  border-radius: 10px;
-  width: 900px;
-  height: 220px;
-
+  background: #606060;
 }
 
-.carre
+.top_block
 {
-  width: 200px;
-  height: 100px;
+  width: 75%;
+  height: 15%;
+  margin: 1% auto;
+  border-top-left-radius : 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-left-radius : 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  box-shadow: 15px 15px 20px black;
+  background:#8f8f8f;
+}
+
+.top_block_left
+{
+  width: 50%;
+  height: 100%;
+  float: left;
+}
+
+.top_block_middle
+{
+  width: 45%;
+  height : 100%;
+  float: left;
+}
+
+.top_block_right
+{
+  width: 5%;
+  height: 100%;
+  float: right;
+}
+
+.middle
+{
+  width: 80%;
+  height: 70%;
+  margin-left: 10%;
+}
+
+.left_middle_block
+{
+  width: 6%;
+  height: 40%;
+  left: 14%;
+  position: relative;
+  border-top-left-radius : 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-left-radius : 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  box-shadow: 15px 15px 20px black;
+  background:#8f8f8f;
+}
+
+.middle_block
+{
+  width: 56%;
+  height: 55%;
+  top: -40%;
+  left: 21%;
+  position: relative;
+  border-top-left-radius : 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-left-radius : 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  box-shadow: 15px 15px 20px black;
+  background:#8f8f8f;
+}
+
+.right_middle_block
+{
+  width: 7%;
+  height: 40%;
+  position: relative;
+  top : -95%;
+  left: 78%;
+  border-top-left-radius : 10px 10px;
+  border-top-right-radius: 10px 10px;
+  border-bottom-left-radius : 10px 10px;
+  border-bottom-right-radius: 10px 10px;
+  box-shadow: 15px 15px 20px black;
+  background:#8f8f8f;
+}
+
+.day42
+{
+  width: 70%;
+  height: 80%;
+  margin: 2%;
   border-top-left-radius : 30px 40px;
   border-top-right-radius: 30px 40px;
   border-bottom-left-radius : 30px 40px;
   border-bottom-right-radius: 30px 40px;
-  background:#069;
+  display: block;
+}
+
+.loupe
+{
+  position: relative;
+  top: 25%;
+  left: 15%;
+  width: 310px;
+  padding-left: 55%;
+}
+
+.reload
+{
+  padding-top: 10%;
+  padding-left: 50%;
+  margin-bottom: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.close
+{
+  padding-top: 70%;
+  padding-left: 50%;
+  width: 25px;
+  height: 25px;
+}
+
+.main
+{
+  width: 100px;
+  height: 100px;
+  margin-left: 15%;
+}
+
+.oeil
+{
+  border: solid 6px red;
+  border-radius: 10px 10px 10px 10px;
+  margin-top: 2%;
+  width: 100px;
+  height: 100px;
+  margin-left: 15%;
+}
+
+.cluster
+{
+  padding-left: 0.5%;
+  padding-top: 0.5%;
+  width: 99%;
+  height: 98%;
+}
+
+.book
+{
+  width: 80px;
+  height: 100px;
+  margin-left: 23%;
+}
+
+.towel
+{
+  width: 60px;
+  height: 60px;
+  margin-left: 30%;
+  padding-right: 15%;
+}
+
+.brick1
+{
+  width: 23%;
+  height: 100px;
+  position: relative;
+  left: 7%;
+}
+
+.brick2
+{
+  width: 23%;
+  height: 100px;
+  position: relative;
+
+}
+.brick3
+{
+  width: 23%;
+  height: 100px;
+  position: relative;
+  right: 3%;
+}
+.brick4
+{
+  width: 23%;
+  height: 100px;
+  position: relative;
+  right: 6%;
+}
+
+.green_box
+{
+	font-family: arial;
+  width: 25%;
+  height: 15%;
+  position: relative;
+  background-color: #88FF89;
+  padding-left: 1%;
+  padding-top: 2px;
+  left: 10%;
+  top : -87%;
+  border-top-left-radius : 20px 20px;
+  border-top-right-radius: 20px 20px;
+  border-bottom-left-radius : 20px 20px;
+  border-bottom-right-radius: 20px 20px;
+  box-shadow: 15px 15px 20px black;
+}
+
+.text1
+{
+	font-family: Times;
+	font-size: 45px;
+}
+
+.text2
+{
+  font-size: 20px;
+  letter-spacing: 1px;
+}
+
+.text3
+{
+  position: relative;
+  top: -6%;
+  font-size: 15px;
+  font-style: italic;
+  letter-spacing: 1px;
+}
+
+.inpt
+{
+  width: 80%;
+}
+
+.test
+{
+  position: relative;
+  top: -10%;
+}
+
+.wrong
+{
+    text-shadow: 0.2em 0.2em 0.1em #FF4F59
+}
+
+.pointeur1
+{
+  position: relative;
+  bottom: 115%;
+  left: 40%;
+  width: 3%;
+  height: 3%;
+  background-color: #FFFFFF;
 }

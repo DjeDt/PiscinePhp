@@ -1,16 +1,28 @@
 #!/usr/bin/php
 <?PHP
-$count = 1;
-$tmp = explode(" ", $argv[1]);
 
-if (count($tmp) > 1)
+function ft_split($input)
 {
-	while (tmp[$count] != NULL)
+	$arr = explode(" ", $input);
+	foreach ($arr as $key => $value)
 	{
-		print("$tmp[$count] ");
-	   	$count++;
+		if ($value == '')
+			unset($arr[$key]);
+		else
+			$arr[$key] = trim($arr[$key], "\x01..\x20");
 	}
+	return ($arr);
 }
-print("$tmp[0]");
-print("\n");
+
+if ($argc < 2)
+	return ;
+
+$count = 1;
+$tmp = array_values(ft_split($argv[$count]));
+while ($tmp[$count] != NULL)
+{
+	print("$tmp[$count] ");
+	$count++;
+}
+print("$tmp[0]\n");
 ?>

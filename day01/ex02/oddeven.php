@@ -2,8 +2,12 @@
 <?PHP
 function get_input()
 {
-	print("Entrez un nombre : ");
 	$handle = fopen("php://stdin", "r");
+	if (!$handle)
+	{
+		print("Can't read stdin");
+		return (NULL);
+	}
 	$input = fgets($handle);
 	fclose($handle);
 	return ($input);
@@ -11,17 +15,15 @@ function get_input()
 
 while (true)
 {
+	print("Entrez un nombre: ");
 	$input = get_input();
-	if ($input == NULL)
-	{
-		print("^D");
+	if ($input === NULL || !$input)
 		break;
-	}
-	$input = rtrim($input);
+	$input = trim($input, "\x00..\x20");
 	if (is_numeric($input))
 	{
-		if ($input % 2 == 1)
-		    print ("Le chiffre $input est Impair\n");
+		if (($input % 2) != 0)
+			print ("Le chiffre $input est Impair\n");
 		else
 			print ("Le chiffre $input est Pair\n");
 	 }

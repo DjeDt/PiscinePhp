@@ -1,23 +1,22 @@
 #!/usr/bin/php
 <?PHP
-$count = 1;
-$arr = array();
-while ($argv[$count] != NULL)
+if ($argc > 1)
 {
-	$tmp = explode(" ", $argv[$count]);
-	$count2 = 0;
-	while ($tmp[$count2] != NULL)
+	unset($argv[0]);
+	$str = implode(" ", $argv);
+	$str = trim($str);
+	while (1)
 	{
-		$arr[] = $tmp[$count2];
-	  	$count2++;
+		$str_tmp = str_replace("  ", " ", $str);
+		if ($str_tmp == $str)
+			break ;
+		$str = $str_tmp;
 	}
-	$count++;
-}
-sort($arr);
-$count = 0;
-while ($arr[$count] != NULL)
-{
-	  print("$arr[$count]\n");
-	  $count++;
+	$array = explode(" ", $str);
+	sort($array);
+	foreach($array as $value)
+	{
+		echo $value."\n";
+	}
 }
 ?>

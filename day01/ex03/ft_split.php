@@ -1,4 +1,3 @@
-#!/usr/bin/php
 <?PHP
 function ft_split($input)
 {
@@ -7,10 +6,10 @@ function ft_split($input)
 	{
 		if ($value == '')
 			unset($arr[$key]);
+		else
+			$arr[$key] = trim($arr[$key], "\x01..\x20");
 	}
-	sort($arr, SORT_FLAG_CASE | SORT_STRING);
+	sort($arr, SORT_STRING);
 	return $arr;
 }
-$r = ft_split("hello   WORLD AAA");
-print_r($r);
 ?>

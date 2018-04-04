@@ -7,12 +7,15 @@ function ft_split($input)
 	foreach ($arr as $key => $value)
 	{
 		if ($value == '')
-		unset($arr[$key]);
+			unset($arr[$key]);
+		else
+			$arr[$key] = trim($arr[$key], "\x01..\x20");
 	}
+	natcasesort($arr);
 	return $arr;
 }
 
-function test($a, $b)
+function own_sort($a, $b)
 {
 	$count = 0;
 	$tmp = array("a", "b", "c", "d", "e", "f", "g", "h", "i", "j", "k", "l", "m", "n", "o", "p", "q", "r",
@@ -32,12 +35,12 @@ function test($a, $b)
 			$v2 = array_search($b[$count], $tmp);
 		}
 		if ($v1 > $v2)
-		   return 1;
+		   return (1);
 		if ($v1 < $v2)
-		   return -1;
+		   return (-1);
 		$count++;
 	}
-	return 0;
+	return (0);
 }
 
 $final = array();
@@ -47,7 +50,7 @@ foreach($argv as $str)
 	$tmp = ft_split($str);
 	$final = array_merge($final, $tmp);
 }
-usort($final, test);
+usort($final, own_sort);
 foreach($final as $str)
 	print $str."\n";
 ?>

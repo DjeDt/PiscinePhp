@@ -26,6 +26,23 @@ function get_month($month)
 		 return 11;
 	else if ($month == "decembre")
 		 return 12;
+	else
+		return -1;
+}
+
+function	check_format($arr)
+{
+
+	/*
+	 0 = jour
+	 1 = nbr
+	 2 = nbr mois
+	 3 = annee
+	 4 = heure
+	 5 = minute
+	 6 = secondes
+	*/
+	if ($arr[1] < 1 || $arr[2] < 12)
 }
 
 if ($argc == 2)
@@ -41,8 +58,10 @@ if ($argc == 2)
 		return ;
 	}
 	$arr[2] = get_month(strtolower($arr[2]));
-	date_default_timezone_set('Europe/Amsterdam');
+	var_dump($arr);
+	check_format($arr);
+	date_default_timezone_set('Europe/Paris');
 	$t = mktime($arr[4], $arr[5], $arr[6], $arr[2], $arr[1], $arr[3]);
-	print($t);
+	print($t."\n");
 }
 ?>
